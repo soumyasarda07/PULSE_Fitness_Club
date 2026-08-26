@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3;url=home.html">
+
+    <title>Loading | PULSE</title>
+
+    <style>
+
+        body {
+            height: 100vh;
+            margin: 0;
+            background-color: #F6F3EC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .loading {
+            width: 300px;
+            text-align: center;
+        }
+
+        .pulse {
+            color: #E4572E;
+            font-size: 35px;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            color: #1B1B18;
+            font-size: 45px;
+            letter-spacing: 3px;
+            margin: 0 0 30px 0;
+        }
+
+        .bar {
+            width: 100%;
+            height: 8px;
+            background-color: #E0DCD0;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            width: 0%;
+            height: 100%;
+            background: linear-gradient(to right, #E4572E, #4C6B54);
+            animation: load 3s forwards;
+        }
+
+        p {
+            color: #4C6B54;
+            font-size: 13px;
+            margin-top: 15px;
+            letter-spacing: 2px;
+        }
+
+        .dots::after {
+            content: "";
+            animation: dots 1.5s infinite;
+        }
+
+        @keyframes load {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes dots {
+            0% {
+                content: "";
+            }
+
+            33% {
+                content: ".";
+            }
+
+            66% {
+                content: "..";
+            }
+
+            100% {
+                content: "...";
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="loading">
+
+        <div class="pulse">〰〰〰</div>
+
+        <h1>PULSE</h1>
+
+        <div class="bar">
+            <div class="progress"></div>
+        </div>
+
+        <p>LOADING<span class="dots"></span></p>
+
+    </div>
+
+</body>
+</html>
